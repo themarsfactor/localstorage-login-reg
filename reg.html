@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>reg</title>
+</head>
+<body>
+	<form>
+		<label>email</label>
+		<input type="email" name="" id="mymail" onblur="check()">
+		<span id="pact"></span>
+	</form>
+
+
+	<script type="text/javascript">
+		
+		
+
+		function check(){
+
+			//let mymatch = /^\w+([\.-]?.\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+			let mymatch = /^\w+[a-z]\w+$/;
+			let mymail = document.querySelector("#mymail").value;
+
+			if (mymail.match(mymatch)){
+
+				let pact = document.querySelector("#pact");
+				pact.innerHTML = "Valid password";
+				pact.style.color = "green";
+			}else{
+				pact.innerHTML= "Invalid password";
+				pact.style.color = "red";
+			}
+
+
+		}
+
+	</script>
+
+</body>
+</html>
